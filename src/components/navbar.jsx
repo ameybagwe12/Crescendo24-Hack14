@@ -1,10 +1,12 @@
 import * as React from "react";
+import { useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
+import axios from "axios"; // Import Axios
 import "../styles/navbar.css";
 
 const Search = styled("div")(({ theme }) => ({
@@ -43,6 +45,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Navbar() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post("YOUR_API_ENDPOINT", { searchTerm });
+      console.log(response.data);
+      // Handle the response as needed
+    } catch (error) {
+      console.error(error);
+      // Handle errors
+    }
+  };
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "black" }}>
