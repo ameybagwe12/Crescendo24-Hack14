@@ -62,11 +62,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "black" }}>
         <Toolbar>
-          <img
-            src={require("./my_assets/analysis_pic.jpg")}
-            width={"5%"}
-            alt="mainPic"
-          />
+         
           <Typography
             className="text-flicker-in-glow"
             style={{
@@ -74,6 +70,8 @@ export default function Navbar() {
               fontFamily: "Lobster",
               fontWeight: "400",
               fontSize: 50,
+              display:"flex",
+              justifyContent:"center"
             }}
             variant="h6"
             noWrap
@@ -89,15 +87,7 @@ export default function Navbar() {
           >
             Oralizer
           </Typography>
-          <Search>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onClick={handleSubmit}
-            />
-          </Search>
+         
         </Toolbar>
       </AppBar>
     </Box>
