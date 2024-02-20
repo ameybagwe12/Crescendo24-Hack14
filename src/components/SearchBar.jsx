@@ -94,7 +94,7 @@ export default function SearchBar() {
             flexDirection: "column",
           }}
         >
-          <Search style={{ borderRadius: "100px" }}>
+          <Search style={{ borderRadius: "25%" }}>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}

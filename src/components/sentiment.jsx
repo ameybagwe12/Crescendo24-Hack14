@@ -8,7 +8,7 @@ export default function SentimentAnalysis({ data }) {
   return (
     <>
       {data && (
-        <div style={{ backgroundColor: "white" }}>
+        <div style={{ backgroundColor: "white", padding: 20 }}>
           <ApexBarChart data={data} />
         </div>
       )}
