@@ -1,6 +1,7 @@
 import React from 'react';
 import "./style/SearchBar.css";
 import { styled, alpha } from "@mui/material/styles";
+import Analysis from './analysis';
 import InputBase from "@mui/material/InputBase";
 export default function SearchBar() {
     const Search = styled("div")(({ theme }) => ({
@@ -38,7 +39,7 @@ export default function SearchBar() {
         },
       }));
   return (
-    <div className='animated-div'   >
+    <>    <div className='animated-div'   >
     <div className='box'>
       <div></div>
       <div></div>
@@ -61,5 +62,8 @@ export default function SearchBar() {
           </Search>
      </div>
   </div>
+  <Analysis />
+  </>
+
   )
 }

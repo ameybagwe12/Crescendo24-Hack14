@@ -11,8 +11,8 @@ function App() {
         style={{ backgroundColor: "#010E1C", minHeight: "100vh" }}
       >
       <SearchBar/>
-        <Analysis />
-<BasicTable/>
+     
+
       </div>
     </>
   );
