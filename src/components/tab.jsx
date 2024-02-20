@@ -1,28 +1,34 @@
 import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import SentimentAnalysis from "./sentiment.jsx"; // Import your SentimentAnalysis component
+import MoreInformation from "./more-info"; // Import your MoreInformation component
 
 export default function SectionTabs() {
-  const [value, setValue] = React.useState(0); // Change the initial value to 0 or 1
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <Tabs
-      value={value}
-      onChange={handleChange}
-      aria-label="disabled tabs example"
-    >
-      <Tab
-        label="Sentiment Analysis"
-        sx={{ color: "white", fontWeight: "bold" }} // Set the tab color to white
-      />
-      <Tab
-        label="More Information"
-        sx={{ color: "white", fontWeight: "bold" }} // Set the tab color to white
-      />
-    </Tabs>
+    <div>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label="disabled tabs example"
+      >
+        <Tab
+          label="Sentiment Analysis"
+          sx={{ color: "white", fontWeight: "bold" }}
+        />
+        <Tab
+          label="More Information"
+          sx={{ color: "white", fontWeight: "bold" }}
+        />
+      </Tabs>
+      {value === 0 && <SentimentAnalysis />}
+      {value === 1 && <MoreInformation />}
+    </div>
   );
 }
