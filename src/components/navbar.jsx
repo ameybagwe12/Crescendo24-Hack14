@@ -8,8 +8,6 @@ import Typography from "@mui/material/Typography";
 import "../styles/navbar.css";
 
 export default function Navbar() {
-  const [searchTerm, setSearchTerm] = useState("");
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ backgroundColor: "black" }}>

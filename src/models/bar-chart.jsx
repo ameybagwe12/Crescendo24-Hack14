@@ -68,7 +68,7 @@ class ApexBarChart extends React.Component {
             height={350}
           />
         </div>
-        <div id="html-dist"></div>
+        {/* <div id="html-dist"></div> */}
       </div>
     );
   }

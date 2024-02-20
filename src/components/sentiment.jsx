@@ -6,8 +6,12 @@ export default function SentimentAnalysis({ data }) {
   console.log("SENTIMENT ANALYSIS ", data);
   console.log("====================================");
   return (
-    <div style={{ backgroundColor: "white" }}>
-      <ApexBarChart data={data} />
-    </div>
+    <>
+      {data && (
+        <div style={{ backgroundColor: "white" }}>
+          <ApexBarChart data={data} />
+        </div>
+      )}
+    </>
   );
 }
