@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
+import "../styles/navbar.css";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -52,6 +53,7 @@ export default function Navbar() {
             alt="mainPic"
           />
           <Typography
+            className="text-flicker-in-glow"
             style={{
               marginLeft: 10,
               fontFamily: "Lobster",
