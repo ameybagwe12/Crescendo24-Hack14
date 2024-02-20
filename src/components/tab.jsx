@@ -12,7 +12,14 @@ export default function SectionTabs({ data }) {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
       <Tabs
         value={value}
         onChange={handleChange}

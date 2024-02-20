@@ -25,7 +25,7 @@ export default function Analysis({ data }) {
       </div>
       <hr style={{ color: "white", paddingRight: 700, paddingLeft: 700 }} />
       <div style={{ textAlign: "center", color: "white" }}>
-        <h2>FEEDBACK</h2>
+        <h2>SUMMARY</h2>
         <div
           style={{
             display: "flex",
@@ -34,7 +34,7 @@ export default function Analysis({ data }) {
           }}
         >
           <IntroDivider
-            name={"Positive Feedback"}
+            name={"Positive"}
             img={"https://i.imgur.com/OKM8toO.png"}
             bg={"rgb(208, 240, 192)"}
           />

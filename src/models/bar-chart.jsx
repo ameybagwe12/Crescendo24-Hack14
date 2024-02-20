@@ -66,6 +66,7 @@ class ApexBarChart extends React.Component {
             series={this.state.series}
             type="bar"
             height={350}
+            width={1500}
           />
         </div>
         {/* <div id="html-dist"></div> */}
