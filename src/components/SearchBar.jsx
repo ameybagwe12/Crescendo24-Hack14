@@ -53,7 +53,7 @@ export default function SearchBar() {
     </div>
     <div style={{ color: "white", display: "flex", justifyContent: "center",alignItems:"center " }}>
   
-      <Search>
+      <Search style={{borderRadius:"100px"}}>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
