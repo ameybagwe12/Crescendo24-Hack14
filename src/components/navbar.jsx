@@ -14,7 +14,7 @@ const Search = styled("div")(({ theme }) => ({
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-  marginLeft: 0,
+  marginRight: 500,
   height: 50,
   width: "100%",
   [theme.breakpoints.up("sm")]: {
@@ -36,7 +36,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     [theme.breakpoints.up("sm")]: {
       width: "12ch",
       "&:focus": {
-        width: "20ch",
+        width: "45ch",
       },
     },
   },
@@ -80,26 +80,6 @@ export default function Navbar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
-          {/* <Typography
-            style={{
-              fontFamily: "Signika Negative",
-              fontWeight: "bold",
-              fontSize: 30,
-            }}
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: {
-                xs: "none",
-                sm: "block",
-                color: "white",
-              },
-            }}
-          >
-            Enter Source Url For Amazon Oral Product Review
-          </Typography> */}
         </Toolbar>
       </AppBar>
     </Box>
