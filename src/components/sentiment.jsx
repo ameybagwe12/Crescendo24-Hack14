@@ -1,10 +1,13 @@
 import React from "react";
-import ApexPieChart from "../models/pie-chart";
+import ApexBarChart from "../models/bar-chart";
 
-export default function SentimentAnalysis() {
+export default function SentimentAnalysis({ data }) {
+  console.log("====================================");
+  console.log("SENTIMENT ANALYSIS ", data);
+  console.log("====================================");
   return (
-    <div>
-      <ApexPieChart />
+    <div style={{ backgroundColor: "white" }}>
+      <ApexBarChart data={data} />
     </div>
   );
 }
