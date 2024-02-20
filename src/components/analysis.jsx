@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/analysis.css";
 import { Player } from "@lottiefiles/react-lottie-player";
+
 import SectionTabs from "./tab.jsx";
 import IntroDivider from "./Table1.jsx";
 export default function Analysis() {
