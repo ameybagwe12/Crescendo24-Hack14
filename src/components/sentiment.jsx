@@ -41,7 +41,6 @@ export default function SentimentAnalysis({ data }) {
       >
         Pie Chart
       </Button>
-
       {pieData && (
         <div style={{ backgroundColor: "white", padding: 20 }}>
           <ApexPieChart pieData={pieData} />

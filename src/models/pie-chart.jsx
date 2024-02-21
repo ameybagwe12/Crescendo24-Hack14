@@ -5,19 +5,14 @@ class ApexPieChart extends React.Component {
   constructor(props) {
     super(props);
 
-    const total = props.Positive + props.Negative + props.Neutral;
-    const positivePercentage = (props.Positive * 100) / total;
-    const negativePercentage = (props.Negative * 100) / total;
-    const neutralPercentage = (props.Neutral * 100) / total;
-
     this.state = {
-      series: [positivePercentage, negativePercentage, neutralPercentage],
+      series: [props.data.Positive, props.data.Negative, props.data.Neutral],
       options: {
         chart: {
           width: 380,
           type: "pie",
         },
-        labels: ["Positive", "Negative", "Neutral"],
+        labels: ["Postive", "Negative", "Neutral"],
         responsive: [
           {
             breakpoint: 480,
@@ -31,12 +26,6 @@ class ApexPieChart extends React.Component {
             },
           },
         ],
-        tooltip: {
-          enabled: true,
-          formatter: function (val) {
-            return val + "%";
-          },
-        },
       },
     };
   }
@@ -52,6 +41,7 @@ class ApexPieChart extends React.Component {
             width={380}
           />
         </div>
+        <div id="html-dist"></div>
       </div>
     );
   }
