@@ -20,7 +20,7 @@ export default function IntroDivider(props) {
           </Typography>
         </Stack>
         <Typography color="text.secondary" variant="body2" style={{color:"black"}}>
-         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ut saepe quae nesciunt, dolore pariatur vero eius optio iste debitis quia dignissimos maxime voluptates eos. Sed, dolorem sit. Aspernatur ab autem, ipsam officia cumque animi, repudiandae inventore esse mollitia quam consequatur molestiae quaerat. Pariatur repellat tempora cupiditate eius beatae ullam et voluptate!
+          {props.pnnData}
         </Typography>
       </Box>
       <Divider />

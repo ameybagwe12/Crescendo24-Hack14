@@ -6,7 +6,7 @@ class ApexPieChart extends React.Component {
     super(props);
 
     this.state = {
-      series: [positivePercentage, negativePercentage, neutralPercentage],
+      series: [props.pieData.Positive, props.pieData.Negative, props.pieData.Neutral],
       options: {
         chart: {
           width: 380,

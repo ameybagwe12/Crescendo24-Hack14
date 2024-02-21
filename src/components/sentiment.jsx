@@ -10,24 +10,26 @@ export default function SentimentAnalysis({ data }) {
   console.log("SENTIMENT ANALYSIS ", data);
   console.log("====================================");
   const [pieData, setPieData] = useState(null);
-  const [sumdata, setSumData] = useState(null);
+  const [bingData, setBingData] = useState("");
 
-  const fetchData = async () => {
-    
-    try {
-      
-      const response1 = await fetch('http://localhost:8000/summarizer');
-      const result1 = await response1.json();
-      setSumData(result1);
-      
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    } 
-    console.log(`sum data is ${sumdata}`)
+ 
+  const getBingData = async () => {
+    axios
+      .get("http://192.168.80.118:8000/bing")
+      .then((response) => {
+        setBingData(response.data);
+        console.log("====================================");
+        console.log("My Bing Data", response.data);
+        console.log("====================================");
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   };
+
   const getPieData = async () => {
     axios
-      .get("http://localhost:8000/sentiment")
+      .get("http://192.168.80.118:8000/sentiment")
       .then((response) => {
         setPieData(response.data);
         console.log("====================================");
@@ -38,6 +40,8 @@ export default function SentimentAnalysis({ data }) {
         console.error("Error fetching data:", error);
       });
   };
+
+
 
   return (
     <>
@@ -63,8 +67,9 @@ export default function SentimentAnalysis({ data }) {
       )}
       <Button
         style={{ marginTop: 15 }}
-        onClick={fetchData}
+        onClick={getBingData}
         variant="contained"
+
       >
       Summarize</Button>
 
@@ -81,16 +86,21 @@ export default function SentimentAnalysis({ data }) {
           name={"Positive"}
           img={"https://i.imgur.com/OKM8toO.png"}
           bg={"rgb(208, 240, 192)"}
+          pnnData={bingData.Positive}
         />
         <IntroDivider
           name={"Neutral Feedback"}
           img={"https://i.imgur.com/53O26t9.png"}
           bg={"rgb(255, 255, 224)"}
+          pnnData={bingData.Neutral}
+
         />
         <IntroDivider
           name={"Negative Feedback"}
           img={"https://i.imgur.com/YxGAW71.png"}
           bg={"rgb( 255,221,221)"}
+          pnnData={bingData.Negative}
+
         />
       </div>
     </div>
