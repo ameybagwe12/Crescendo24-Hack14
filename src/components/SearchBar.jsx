@@ -59,7 +59,7 @@ export default function SearchBar() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://192.168.80.118:8000", {
+      const response = await axios.post("http://localhost:8000", {
         searchTerm,
       });
       console.log(response.data);

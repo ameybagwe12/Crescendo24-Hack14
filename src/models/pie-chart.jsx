@@ -4,14 +4,10 @@ import ReactApexChart from "react-apexcharts";
 class ApexPieChart extends React.Component {
   constructor(props) {
     super(props);
-
-    const total = props.Positive + props.Negative + props.Neutral;
-    const positivePercentage = (props.Positive * 100) / total;
-    const negativePercentage = (props.Negative * 100) / total;
-    const neutralPercentage = (props.Neutral * 100) / total;
+    console.log(props);
 
     this.state = {
-      series: [positivePercentage, negativePercentage, neutralPercentage],
+      series: [props.pieData.Positive, props.pieData.Negative, props.pieData.Neutral],
       options: {
         chart: {
           width: 380,
