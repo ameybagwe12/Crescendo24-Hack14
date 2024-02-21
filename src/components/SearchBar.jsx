@@ -54,7 +54,7 @@ export default function SearchBar() {
   }));
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [data, getData] = useState("");
+  const [data, getData] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -72,7 +72,6 @@ export default function SearchBar() {
   };
   return (
     <>
-      {" "}
       <div className="animated-div">
         <div className="box">
           <div></div>

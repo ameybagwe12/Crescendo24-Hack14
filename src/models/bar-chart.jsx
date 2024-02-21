@@ -51,7 +51,7 @@ class ApexBarChart extends React.Component {
       series: [
         {
           name: "Frequency",
-          data: this.props.data.freq, // Use frequencies from props for y-axis
+          data: this.props.data.frequencies, // Use frequencies from props for y-axis
         },
       ],
     };
