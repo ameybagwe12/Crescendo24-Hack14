@@ -53,7 +53,7 @@ export default function SearchBar() {
     },
   }));
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(null);
   const [data, getData] = useState(null);
 
   const handleSubmit = async (event) => {

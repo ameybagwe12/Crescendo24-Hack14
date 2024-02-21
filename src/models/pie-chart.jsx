@@ -4,16 +4,15 @@ import ReactApexChart from "react-apexcharts";
 class ApexPieChart extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
 
     this.state = {
-      series: [props.pieData.Positive, props.pieData.Negative, props.pieData.Neutral],
+      series: [positivePercentage, negativePercentage, neutralPercentage],
       options: {
         chart: {
           width: 380,
           type: "pie",
         },
-        labels: ["Positive", "Negative", "Neutral"],
+        labels: ["Postive", "Negative", "Neutral"],
         responsive: [
           {
             breakpoint: 480,
@@ -27,12 +26,6 @@ class ApexPieChart extends React.Component {
             },
           },
         ],
-        tooltip: {
-          enabled: true,
-          formatter: function (val) {
-            return val + "%";
-          },
-        },
       },
     };
   }
@@ -48,6 +41,7 @@ class ApexPieChart extends React.Component {
             width={380}
           />
         </div>
+        <div id="html-dist"></div>
       </div>
     );
   }
