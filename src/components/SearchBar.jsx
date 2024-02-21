@@ -95,7 +95,7 @@ export default function SearchBar() {
         >
           <Search style={{ borderRadius: "100px" }}>
             <StyledInputBase
-              placeholder="Ex http//:product//review"
+              placeholder="Ex: http//:product//review"
               inputProps={{ "aria-label": "search" }}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
