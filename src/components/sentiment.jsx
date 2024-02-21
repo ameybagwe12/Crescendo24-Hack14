@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ApexBarChart from "../models/bar-chart";
 import axios from "axios";
 import ApexPieChart from "../models/pie-chart";
+import Button from "@mui/material/Button";
 
 export default function SentimentAnalysis({ data }) {
   console.log("====================================");
@@ -25,7 +26,7 @@ export default function SentimentAnalysis({ data }) {
 
   return (
     <>
-      {data && getPieData() && (
+      {data && (
         <>
           <div style={{ backgroundColor: "white", padding: 20 }}>
             <ApexBarChart data={data} />
@@ -33,9 +34,19 @@ export default function SentimentAnalysis({ data }) {
           <br />
         </>
       )}
-      <div style={{ backgroundColor: "white", padding: 20 }}>
-        <ApexPieChart pieData={pieData} />
-      </div>
+      <Button
+        style={{ marginTop: 15 }}
+        onClick={getPieData}
+        variant="contained"
+      >
+        Pie Chart
+      </Button>
+
+      {pieData && (
+        <div style={{ backgroundColor: "white", padding: 20 }}>
+          <ApexPieChart pieData={pieData} />
+        </div>
+      )}
     </>
   );
 }
