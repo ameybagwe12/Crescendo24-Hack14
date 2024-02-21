@@ -45,7 +45,7 @@ export default function SearchBar() {
 
       transition: theme.transitions.create("width"),
       [theme.breakpoints.up("sm")]: {
-        width: "12ch",
+        width: "45ch",
         "&:focus": {
           width: "45ch",
         },
@@ -96,7 +96,7 @@ export default function SearchBar() {
         >
           <Search style={{ borderRadius: "100px" }}>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Ex http//:product//review"
               inputProps={{ "aria-label": "search" }}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -107,7 +107,7 @@ export default function SearchBar() {
             onClick={handleSubmit}
             variant="contained"
           >
-            Search
+            Analyze
           </ColorButton>
         </div>
       </div>
